@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{B47833C2-CC00-4490-A751-A16553374E0E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>INTERWEBZ CSS (fixed by Shaxzy)</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>css</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <TargetName>css</TargetName>
+    <OutDir>..</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CSSBASE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CSSBASE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CAimbot.cpp" />
+    <ClCompile Include="CDraw.cpp" />
+    <ClCompile Include="CESP.cpp" />
+    <ClCompile Include="CGameEventManager.cpp" />
+    <ClCompile Include="checksum_crc.cpp" />
+    <ClCompile Include="client.cpp" />
+    <ClCompile Include="CMath.cpp" />
+    <ClCompile Include="CNoSpread.cpp" />
+    <ClCompile Include="CValve.cpp" />
+    <ClCompile Include="CVARS.cpp" />
+    <ClCompile Include="CWinsock.cpp" />
+    <ClCompile Include="DllMain.cpp" />
+    <ClCompile Include="MD5.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="mouse.cpp" />
+    <ClCompile Include="Netvars.cpp" />
+    <ClCompile Include="Surface.cpp" />
+    <ClCompile Include="Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CAimbot.h" />
+    <ClInclude Include="CBaseCombatWeapon.h" />
+    <ClInclude Include="CBaseEntity.h" />
+    <ClInclude Include="CDebugOverlay.h" />
+    <ClInclude Include="CDraw.h" />
+    <ClInclude Include="CEngineClient.h" />
+    <ClInclude Include="CEntityList.h" />
+    <ClInclude Include="CESP.h" />
+    <ClInclude Include="CGameEventManager.h" />
+    <ClInclude Include="CGameMovement.h" />
+    <ClInclude Include="CGlobalVars.h" />
+    <ClInclude Include="checksum_crc.h" />
+    <ClInclude Include="CInput.h" />
+    <ClInclude Include="client.h" />
+    <ClInclude Include="ClientClass.h" />
+    <ClInclude Include="CMath.h" />
+    <ClInclude Include="CModelInfo.h" />
+    <ClInclude Include="CNoSpread.h" />
+    <ClInclude Include="ConVar.h" />
+    <ClInclude Include="CPrediction.h" />
+    <ClInclude Include="CTrace.h" />
+    <ClInclude Include="CValve.h" />
+    <ClInclude Include="CVARS.h" />
+    <ClInclude Include="CWinsock.h" />
+    <ClInclude Include="DllMain.h" />
+    <ClInclude Include="HLClient.h" />
+    <ClInclude Include="IGameEvent.h" />
+    <ClInclude Include="IGameEventListener2.h" />
+    <ClInclude Include="IGameEventManager.h" />
+    <ClInclude Include="IMoveHelper.h" />
+    <ClInclude Include="IPanel.h" />
+    <ClInclude Include="ISurface.h" />
+    <ClInclude Include="MD5.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="mouse.h" />
+    <ClInclude Include="netvars.h" />
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="ReflectiveDLLInjection.h" />
+    <ClInclude Include="ReflectiveLoader.h" />
+    <ClInclude Include="sdk.h" />
+    <ClInclude Include="Surface.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="valve\dt_common2.h" />
+    <ClInclude Include="valve\dt_recv2.h" />
+    <ClInclude Include="valve_off.h" />
+    <ClInclude Include="valve_on.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="wchartypes.h" />
+    <ClInclude Include="xor.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
